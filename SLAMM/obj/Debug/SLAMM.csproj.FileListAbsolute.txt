@@ -1,0 +1,9 @@
+F:\GITSTUDY\SLAMM\SLAMM\bin\Debug\SLAMM.exe.config
+F:\GITSTUDY\SLAMM\SLAMM\bin\Debug\SLAMM.exe
+F:\GITSTUDY\SLAMM\SLAMM\bin\Debug\SLAMM.pdb
+F:\GITSTUDY\SLAMM\SLAMM\obj\Debug\SLAMM.csprojResolveAssemblyReference.cache
+F:\GITSTUDY\SLAMM\SLAMM\obj\Debug\SLAMM.Form1.resources
+F:\GITSTUDY\SLAMM\SLAMM\obj\Debug\SLAMM.Properties.Resources.resources
+F:\GITSTUDY\SLAMM\SLAMM\obj\Debug\SLAMM.csproj.GenerateResource.Cache
+F:\GITSTUDY\SLAMM\SLAMM\obj\Debug\SLAMM.exe
+F:\GITSTUDY\SLAMM\SLAMM\obj\Debug\SLAMM.pdb

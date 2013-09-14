@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="SLAMMdb">
+  <DataContextMoniker Name="/SLAMMdbDataContext" />
+  <nestedChildShapes>
+    <classShape Id="812dc49e-4f26-495a-9ee9-358f934912b8" absoluteBounds="6.25, 2.25, 2, 2.155499674479167">
+      <DataClassMoniker Name="/SLAMMdbDataContext/tblFilesRecon" />
+      <nestedChildShapes>
+        <elementListCompartment Id="569793b5-2526-4e5c-990f-2e90b64679d5" absoluteBounds="6.265, 2.71, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1fad7e21-797d-4505-bb62-7b309fb555bd" absoluteBounds="0.75, 2.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/SLAMMdbDataContext/tblFilesRecon_Function" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bb463295-34c6-4be6-9d6a-2fdbb834895d" absoluteBounds="0.765, 3.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b1d81b38-a3e3-44b0-8ab3-19c5035c1c29" absoluteBounds="3.5, 1.75, 2, 3.309308268229167">
+      <DataClassMoniker Name="/SLAMMdbDataContext/tblFilesRecon_Location" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9de1d5e5-4505-4f8d-bc12-0403d3f4f03a" absoluteBounds="3.515, 2.21, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0d8b64fa-f1d3-4320-9450-edc3527396b4" absoluteBounds="0.75, 0.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/SLAMMdbDataContext/tblFilesRecon_Market" />
+      <nestedChildShapes>
+        <elementListCompartment Id="999467a8-5528-4b1d-beec-9102238a0231" absoluteBounds="0.765, 1.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 3.32774983723958); (6.25 : 3.32774983723958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SLAMMdbDataContext/tblFilesRecon_Location/tblFilesRecon_Location_tblFilesRecon" />
+      <nodes>
+        <classShapeMoniker Id="b1d81b38-a3e3-44b0-8ab3-19c5035c1c29" />
+        <classShapeMoniker Id="812dc49e-4f26-495a-9ee9-358f934912b8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 3.34699625651042); (3.5 : 3.34699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SLAMMdbDataContext/tblFilesRecon_Function/tblFilesRecon_Function_tblFilesRecon_Location" />
+      <nodes>
+        <classShapeMoniker Id="1fad7e21-797d-4505-bb62-7b309fb555bd" />
+        <classShapeMoniker Id="b1d81b38-a3e3-44b0-8ab3-19c5035c1c29" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 1.2499995); (4.5 : 1.2499995); (4.5 : 1.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SLAMMdbDataContext/tblFilesRecon_Market/tblFilesRecon_Market_tblFilesRecon_Location" />
+      <nodes>
+        <classShapeMoniker Id="0d8b64fa-f1d3-4320-9450-edc3527396b4" />
+        <classShapeMoniker Id="b1d81b38-a3e3-44b0-8ab3-19c5035c1c29" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
