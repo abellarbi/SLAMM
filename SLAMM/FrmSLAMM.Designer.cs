@@ -43,7 +43,7 @@
             System.Windows.Forms.Label pathIdLabel;
             System.Windows.Forms.Label timeZoneLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSLAMM));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tblFilesRecon_LocationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tblFilesRecon_LocationBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
@@ -173,11 +173,12 @@
             // functionIdLabel
             // 
             functionIdLabel.AutoSize = true;
-            functionIdLabel.Location = new System.Drawing.Point(28, 180);
+            functionIdLabel.Location = new System.Drawing.Point(28, 183);
             functionIdLabel.Name = "functionIdLabel";
             functionIdLabel.Size = new System.Drawing.Size(63, 13);
             functionIdLabel.TabIndex = 13;
             functionIdLabel.Text = "Function Id:";
+            functionIdLabel.DoubleClick += new System.EventHandler(this.functionIdLabel_DoubleClick);
             // 
             // isActiveLabel
             // 
@@ -205,6 +206,7 @@
             marketIdLabel.Size = new System.Drawing.Size(55, 13);
             marketIdLabel.TabIndex = 19;
             marketIdLabel.Text = "Market Id:";
+            marketIdLabel.DoubleClick += new System.EventHandler(this.marketIdLabel_DoubleClick);
             // 
             // pathLabel
             // 
@@ -223,6 +225,7 @@
             pathIdLabel.Size = new System.Drawing.Size(44, 13);
             pathIdLabel.TabIndex = 23;
             pathIdLabel.Text = "Path Id:";
+            pathIdLabel.DoubleClick += new System.EventHandler(this.pathIdLabel_DoubleClick);
             // 
             // timeZoneLabel
             // 
@@ -605,8 +608,8 @@
             // 
             this.tblFilesRecon_LocationDataGridView.AllowUserToAddRows = false;
             this.tblFilesRecon_LocationDataGridView.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.tblFilesRecon_LocationDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.tblFilesRecon_LocationDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.tblFilesRecon_LocationDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));

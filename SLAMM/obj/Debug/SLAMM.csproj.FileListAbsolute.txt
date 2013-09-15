@@ -7,3 +7,6 @@ F:\GITSTUDY\SLAMM\SLAMM\obj\Debug\SLAMM.exe
 F:\GITSTUDY\SLAMM\SLAMM\obj\Debug\SLAMM.pdb
 F:\GITSTUDY\SLAMM\SLAMM\obj\Debug\SLAMM.FrmSLAMM.resources
 F:\GITSTUDY\SLAMM\SLAMM\obj\Debug\SLAMM.FrmMarket.resources
+F:\GITSTUDY\SLAMM\SLAMM\obj\Debug\SLAMM.csprojResolveAssemblyReference.cache
+F:\GITSTUDY\SLAMM\SLAMM\obj\Debug\SLAMM.FrmReconStatus.resources
+F:\GITSTUDY\SLAMM\SLAMM\obj\Debug\SLAMM.FrmFunction.resources

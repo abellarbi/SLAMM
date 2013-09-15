@@ -248,6 +248,39 @@ namespace SLAMM
             }
         }
 
+
+
+      
+
+        private void pathIdLabel_DoubleClick(object sender, EventArgs e)
+        {
+            if (_hasSuperAccess)
+            {
+                FrmReconStatus x = new FrmReconStatus();
+                x.PathID = int.Parse(pathIdTextBox.Text);
+                x.ShowDialog();
+            }
+        }
+
+        private void marketIdLabel_DoubleClick(object sender, EventArgs e)
+        {
+            if (_hasSuperAccess)
+            {
+                FrmMarket x = new FrmMarket();
+                x.ShowDialog();
+            }
+        }
+
+        private void functionIdLabel_DoubleClick(object sender, EventArgs e)
+        {
+            if (_hasSuperAccess)
+            {
+                FrmFunction x = new FrmFunction();
+                x.ShowDialog();
+            }
+        }
+
+
  
 
   

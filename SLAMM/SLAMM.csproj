@@ -45,11 +45,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmFunction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFunction.Designer.cs">
+      <DependentUpon>FrmFunction.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMarket.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmMarket.Designer.cs">
       <DependentUpon>FrmMarket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReconStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReconStatus.Designer.cs">
+      <DependentUpon>FrmReconStatus.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmSLAMM.cs">
       <SubType>Form</SubType>
@@ -68,8 +80,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SLAMMdb.dbml</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FrmFunction.resx">
+      <DependentUpon>FrmFunction.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMarket.resx">
       <DependentUpon>FrmMarket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReconStatus.resx">
+      <DependentUpon>FrmReconStatus.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSLAMM.resx">
       <DependentUpon>FrmSLAMM.cs</DependentUpon>
@@ -83,6 +101,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Properties\DataSources\tblFilesRecon.datasource" />
     <None Include="Properties\DataSources\tblFilesRecon_Function.datasource" />
     <None Include="Properties\DataSources\tblFilesRecon_Location.datasource" />
     <None Include="Properties\DataSources\tblFilesRecon_Market.datasource" />
@@ -105,7 +124,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
