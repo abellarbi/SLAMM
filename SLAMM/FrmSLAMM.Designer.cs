@@ -75,6 +75,8 @@
             this.marketIdListBox = new System.Windows.Forms.ListBox();
             this.functionIdListBox = new System.Windows.Forms.ListBox();
             this.timeZoneListBox = new System.Windows.Forms.ListBox();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.panel1 = new System.Windows.Forms.Panel();
             arrivalTimeLabel = new System.Windows.Forms.Label();
             datePatternLabel = new System.Windows.Forms.Label();
             dateVariationLabel = new System.Windows.Forms.Label();
@@ -94,12 +96,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.tblFilesReconFunctionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblFilesReconMarketBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // arrivalTimeLabel
             // 
             arrivalTimeLabel.AutoSize = true;
-            arrivalTimeLabel.Location = new System.Drawing.Point(126, 67);
+            arrivalTimeLabel.Location = new System.Drawing.Point(28, 23);
             arrivalTimeLabel.Name = "arrivalTimeLabel";
             arrivalTimeLabel.Size = new System.Drawing.Size(65, 13);
             arrivalTimeLabel.TabIndex = 1;
@@ -108,7 +111,7 @@
             // datePatternLabel
             // 
             datePatternLabel.AutoSize = true;
-            datePatternLabel.Location = new System.Drawing.Point(126, 93);
+            datePatternLabel.Location = new System.Drawing.Point(28, 49);
             datePatternLabel.Name = "datePatternLabel";
             datePatternLabel.Size = new System.Drawing.Size(70, 13);
             datePatternLabel.TabIndex = 3;
@@ -117,7 +120,7 @@
             // dateVariationLabel
             // 
             dateVariationLabel.AutoSize = true;
-            dateVariationLabel.Location = new System.Drawing.Point(126, 120);
+            dateVariationLabel.Location = new System.Drawing.Point(28, 76);
             dateVariationLabel.Name = "dateVariationLabel";
             dateVariationLabel.Size = new System.Drawing.Size(77, 13);
             dateVariationLabel.TabIndex = 5;
@@ -126,7 +129,7 @@
             // descriptionLabel
             // 
             descriptionLabel.AutoSize = true;
-            descriptionLabel.Location = new System.Drawing.Point(126, 146);
+            descriptionLabel.Location = new System.Drawing.Point(28, 102);
             descriptionLabel.Name = "descriptionLabel";
             descriptionLabel.Size = new System.Drawing.Size(63, 13);
             descriptionLabel.TabIndex = 7;
@@ -135,7 +138,7 @@
             // emailNotificationLabel
             // 
             emailNotificationLabel.AutoSize = true;
-            emailNotificationLabel.Location = new System.Drawing.Point(126, 172);
+            emailNotificationLabel.Location = new System.Drawing.Point(28, 128);
             emailNotificationLabel.Name = "emailNotificationLabel";
             emailNotificationLabel.Size = new System.Drawing.Size(91, 13);
             emailNotificationLabel.TabIndex = 9;
@@ -144,7 +147,7 @@
             // filePatternLabel
             // 
             filePatternLabel.AutoSize = true;
-            filePatternLabel.Location = new System.Drawing.Point(126, 198);
+            filePatternLabel.Location = new System.Drawing.Point(28, 154);
             filePatternLabel.Name = "filePatternLabel";
             filePatternLabel.Size = new System.Drawing.Size(63, 13);
             filePatternLabel.TabIndex = 11;
@@ -153,7 +156,7 @@
             // functionIdLabel
             // 
             functionIdLabel.AutoSize = true;
-            functionIdLabel.Location = new System.Drawing.Point(126, 224);
+            functionIdLabel.Location = new System.Drawing.Point(28, 180);
             functionIdLabel.Name = "functionIdLabel";
             functionIdLabel.Size = new System.Drawing.Size(63, 13);
             functionIdLabel.TabIndex = 13;
@@ -162,7 +165,7 @@
             // isActiveLabel
             // 
             isActiveLabel.AutoSize = true;
-            isActiveLabel.Location = new System.Drawing.Point(126, 351);
+            isActiveLabel.Location = new System.Drawing.Point(28, 318);
             isActiveLabel.Name = "isActiveLabel";
             isActiveLabel.Size = new System.Drawing.Size(51, 13);
             isActiveLabel.TabIndex = 15;
@@ -171,7 +174,7 @@
             // isRecursiveLabel
             // 
             isRecursiveLabel.AutoSize = true;
-            isRecursiveLabel.Location = new System.Drawing.Point(445, 351);
+            isRecursiveLabel.Location = new System.Drawing.Point(347, 318);
             isRecursiveLabel.Name = "isRecursiveLabel";
             isRecursiveLabel.Size = new System.Drawing.Size(69, 13);
             isRecursiveLabel.TabIndex = 9;
@@ -180,7 +183,7 @@
             // marketIdLabel
             // 
             marketIdLabel.AutoSize = true;
-            marketIdLabel.Location = new System.Drawing.Point(445, 227);
+            marketIdLabel.Location = new System.Drawing.Point(347, 183);
             marketIdLabel.Name = "marketIdLabel";
             marketIdLabel.Size = new System.Drawing.Size(55, 13);
             marketIdLabel.TabIndex = 19;
@@ -189,7 +192,7 @@
             // pathLabel
             // 
             pathLabel.AutoSize = true;
-            pathLabel.Location = new System.Drawing.Point(126, 392);
+            pathLabel.Location = new System.Drawing.Point(28, 348);
             pathLabel.Name = "pathLabel";
             pathLabel.Size = new System.Drawing.Size(32, 13);
             pathLabel.TabIndex = 21;
@@ -198,7 +201,7 @@
             // pathIdLabel
             // 
             pathIdLabel.AutoSize = true;
-            pathIdLabel.Location = new System.Drawing.Point(126, 418);
+            pathIdLabel.Location = new System.Drawing.Point(28, 374);
             pathIdLabel.Name = "pathIdLabel";
             pathIdLabel.Size = new System.Drawing.Size(44, 13);
             pathIdLabel.TabIndex = 23;
@@ -207,7 +210,7 @@
             // timeZoneLabel
             // 
             timeZoneLabel.AutoSize = true;
-            timeZoneLabel.Location = new System.Drawing.Point(126, 444);
+            timeZoneLabel.Location = new System.Drawing.Point(28, 400);
             timeZoneLabel.Name = "timeZoneLabel";
             timeZoneLabel.Size = new System.Drawing.Size(61, 13);
             timeZoneLabel.TabIndex = 25;
@@ -243,7 +246,7 @@
             this.tblFilesRecon_LocationBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.tblFilesRecon_LocationBindingNavigator.Name = "tblFilesRecon_LocationBindingNavigator";
             this.tblFilesRecon_LocationBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.tblFilesRecon_LocationBindingNavigator.Size = new System.Drawing.Size(952, 25);
+            this.tblFilesRecon_LocationBindingNavigator.Size = new System.Drawing.Size(1273, 25);
             this.tblFilesRecon_LocationBindingNavigator.TabIndex = 0;
             this.tblFilesRecon_LocationBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -346,7 +349,7 @@
             // arrivalTimeTextBox
             // 
             this.arrivalTimeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblFilesRecon_LocationBindingSource, "ArrivalTime", true));
-            this.arrivalTimeTextBox.Location = new System.Drawing.Point(223, 64);
+            this.arrivalTimeTextBox.Location = new System.Drawing.Point(125, 20);
             this.arrivalTimeTextBox.Name = "arrivalTimeTextBox";
             this.arrivalTimeTextBox.Size = new System.Drawing.Size(521, 20);
             this.arrivalTimeTextBox.TabIndex = 0;
@@ -355,7 +358,7 @@
             // dateVariationTextBox
             // 
             this.dateVariationTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblFilesRecon_LocationBindingSource, "DateVariation", true));
-            this.dateVariationTextBox.Location = new System.Drawing.Point(223, 117);
+            this.dateVariationTextBox.Location = new System.Drawing.Point(125, 73);
             this.dateVariationTextBox.Name = "dateVariationTextBox";
             this.dateVariationTextBox.Size = new System.Drawing.Size(521, 20);
             this.dateVariationTextBox.TabIndex = 2;
@@ -364,7 +367,7 @@
             // descriptionTextBox
             // 
             this.descriptionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblFilesRecon_LocationBindingSource, "Description", true));
-            this.descriptionTextBox.Location = new System.Drawing.Point(223, 143);
+            this.descriptionTextBox.Location = new System.Drawing.Point(125, 99);
             this.descriptionTextBox.Name = "descriptionTextBox";
             this.descriptionTextBox.Size = new System.Drawing.Size(521, 20);
             this.descriptionTextBox.TabIndex = 3;
@@ -372,7 +375,7 @@
             // emailNotificationTextBox
             // 
             this.emailNotificationTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblFilesRecon_LocationBindingSource, "EmailNotification", true));
-            this.emailNotificationTextBox.Location = new System.Drawing.Point(223, 169);
+            this.emailNotificationTextBox.Location = new System.Drawing.Point(125, 125);
             this.emailNotificationTextBox.Name = "emailNotificationTextBox";
             this.emailNotificationTextBox.Size = new System.Drawing.Size(521, 20);
             this.emailNotificationTextBox.TabIndex = 4;
@@ -381,7 +384,7 @@
             // filePatternTextBox
             // 
             this.filePatternTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblFilesRecon_LocationBindingSource, "FilePattern", true));
-            this.filePatternTextBox.Location = new System.Drawing.Point(223, 195);
+            this.filePatternTextBox.Location = new System.Drawing.Point(125, 151);
             this.filePatternTextBox.Name = "filePatternTextBox";
             this.filePatternTextBox.Size = new System.Drawing.Size(521, 20);
             this.filePatternTextBox.TabIndex = 5;
@@ -394,9 +397,9 @@
             // isActiveCheckBox
             // 
             this.isActiveCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.tblFilesRecon_LocationBindingSource, "IsActive", true));
-            this.isActiveCheckBox.Location = new System.Drawing.Point(223, 351);
+            this.isActiveCheckBox.Location = new System.Drawing.Point(125, 318);
             this.isActiveCheckBox.Name = "isActiveCheckBox";
-            this.isActiveCheckBox.Size = new System.Drawing.Size(119, 24);
+            this.isActiveCheckBox.Size = new System.Drawing.Size(119, 21);
             this.isActiveCheckBox.TabIndex = 8;
             this.isActiveCheckBox.Text = "Active";
             this.isActiveCheckBox.UseVisualStyleBackColor = true;
@@ -404,9 +407,9 @@
             // isRecursiveCheckBox
             // 
             this.isRecursiveCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.tblFilesRecon_LocationBindingSource, "IsRecursive", true));
-            this.isRecursiveCheckBox.Location = new System.Drawing.Point(542, 351);
+            this.isRecursiveCheckBox.Location = new System.Drawing.Point(444, 318);
             this.isRecursiveCheckBox.Name = "isRecursiveCheckBox";
-            this.isRecursiveCheckBox.Size = new System.Drawing.Size(135, 24);
+            this.isRecursiveCheckBox.Size = new System.Drawing.Size(135, 21);
             this.isRecursiveCheckBox.TabIndex = 9;
             this.isRecursiveCheckBox.Text = "Recursive";
             this.isRecursiveCheckBox.UseVisualStyleBackColor = true;
@@ -418,7 +421,7 @@
             // pathTextBox
             // 
             this.pathTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblFilesRecon_LocationBindingSource, "Path", true));
-            this.pathTextBox.Location = new System.Drawing.Point(223, 389);
+            this.pathTextBox.Location = new System.Drawing.Point(125, 345);
             this.pathTextBox.Name = "pathTextBox";
             this.pathTextBox.Size = new System.Drawing.Size(521, 20);
             this.pathTextBox.TabIndex = 10;
@@ -428,7 +431,7 @@
             // 
             this.pathIdTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblFilesRecon_LocationBindingSource, "PathId", true));
             this.pathIdTextBox.Enabled = false;
-            this.pathIdTextBox.Location = new System.Drawing.Point(223, 415);
+            this.pathIdTextBox.Location = new System.Drawing.Point(125, 371);
             this.pathIdTextBox.Name = "pathIdTextBox";
             this.pathIdTextBox.Size = new System.Drawing.Size(521, 20);
             this.pathIdTextBox.TabIndex = 11;
@@ -436,17 +439,17 @@
             // button1
             // 
             this.button1.CausesValidation = false;
-            this.button1.Location = new System.Drawing.Point(223, 517);
+            this.button1.Location = new System.Drawing.Point(490, 433);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 13;
-            this.button1.Text = "Refresh";
+            this.button1.Text = "Cancel";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(345, 517);
+            this.button2.Location = new System.Drawing.Point(571, 433);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 14;
@@ -457,7 +460,7 @@
             // datePatternTextBox
             // 
             this.datePatternTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblFilesRecon_LocationBindingSource, "DatePattern", true));
-            this.datePatternTextBox.Location = new System.Drawing.Point(223, 93);
+            this.datePatternTextBox.Location = new System.Drawing.Point(125, 49);
             this.datePatternTextBox.Name = "datePatternTextBox";
             this.datePatternTextBox.Size = new System.Drawing.Size(521, 20);
             this.datePatternTextBox.TabIndex = 1;
@@ -473,7 +476,7 @@
             this.marketIdListBox.DataSource = this.tblFilesReconMarketBindingSource;
             this.marketIdListBox.DisplayMember = "Market";
             this.marketIdListBox.FormattingEnabled = true;
-            this.marketIdListBox.Location = new System.Drawing.Point(542, 224);
+            this.marketIdListBox.Location = new System.Drawing.Point(444, 180);
             this.marketIdListBox.Name = "marketIdListBox";
             this.marketIdListBox.Size = new System.Drawing.Size(202, 121);
             this.marketIdListBox.TabIndex = 7;
@@ -485,7 +488,7 @@
             this.functionIdListBox.DataSource = this.tblFilesReconFunctionBindingSource;
             this.functionIdListBox.DisplayMember = "FunctionName";
             this.functionIdListBox.FormattingEnabled = true;
-            this.functionIdListBox.Location = new System.Drawing.Point(223, 224);
+            this.functionIdListBox.Location = new System.Drawing.Point(125, 180);
             this.functionIdListBox.Name = "functionIdListBox";
             this.functionIdListBox.Size = new System.Drawing.Size(202, 121);
             this.functionIdListBox.TabIndex = 6;
@@ -495,45 +498,62 @@
             // 
             this.timeZoneListBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tblFilesRecon_LocationBindingSource, "TimeZone", true));
             this.timeZoneListBox.FormattingEnabled = true;
-            this.timeZoneListBox.Location = new System.Drawing.Point(223, 444);
+            this.timeZoneListBox.Location = new System.Drawing.Point(125, 400);
             this.timeZoneListBox.Name = "timeZoneListBox";
             this.timeZoneListBox.Size = new System.Drawing.Size(197, 56);
             this.timeZoneListBox.TabIndex = 12;
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Location = new System.Drawing.Point(0, 642);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(1273, 22);
+            this.statusStrip1.TabIndex = 26;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.arrivalTimeTextBox);
+            this.panel1.Controls.Add(this.timeZoneListBox);
+            this.panel1.Controls.Add(timeZoneLabel);
+            this.panel1.Controls.Add(this.functionIdListBox);
+            this.panel1.Controls.Add(this.pathIdTextBox);
+            this.panel1.Controls.Add(this.marketIdListBox);
+            this.panel1.Controls.Add(pathIdLabel);
+            this.panel1.Controls.Add(this.datePatternTextBox);
+            this.panel1.Controls.Add(this.pathTextBox);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(pathLabel);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(marketIdLabel);
+            this.panel1.Controls.Add(arrivalTimeLabel);
+            this.panel1.Controls.Add(this.isRecursiveCheckBox);
+            this.panel1.Controls.Add(isRecursiveLabel);
+            this.panel1.Controls.Add(datePatternLabel);
+            this.panel1.Controls.Add(this.isActiveCheckBox);
+            this.panel1.Controls.Add(dateVariationLabel);
+            this.panel1.Controls.Add(isActiveLabel);
+            this.panel1.Controls.Add(this.dateVariationTextBox);
+            this.panel1.Controls.Add(functionIdLabel);
+            this.panel1.Controls.Add(descriptionLabel);
+            this.panel1.Controls.Add(this.filePatternTextBox);
+            this.panel1.Controls.Add(this.descriptionTextBox);
+            this.panel1.Controls.Add(filePatternLabel);
+            this.panel1.Controls.Add(emailNotificationLabel);
+            this.panel1.Controls.Add(this.emailNotificationTextBox);
+            this.panel1.Location = new System.Drawing.Point(28, 37);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(687, 593);
+            this.panel1.TabIndex = 27;
             // 
             // FrmSLAMM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(952, 664);
-            this.Controls.Add(this.timeZoneListBox);
-            this.Controls.Add(this.functionIdListBox);
-            this.Controls.Add(this.marketIdListBox);
-            this.Controls.Add(this.datePatternTextBox);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(arrivalTimeLabel);
-            this.Controls.Add(this.arrivalTimeTextBox);
-            this.Controls.Add(datePatternLabel);
-            this.Controls.Add(dateVariationLabel);
-            this.Controls.Add(this.dateVariationTextBox);
-            this.Controls.Add(descriptionLabel);
-            this.Controls.Add(this.descriptionTextBox);
-            this.Controls.Add(emailNotificationLabel);
-            this.Controls.Add(this.emailNotificationTextBox);
-            this.Controls.Add(filePatternLabel);
-            this.Controls.Add(this.filePatternTextBox);
-            this.Controls.Add(functionIdLabel);
-            this.Controls.Add(isActiveLabel);
-            this.Controls.Add(this.isActiveCheckBox);
-            this.Controls.Add(isRecursiveLabel);
-            this.Controls.Add(this.isRecursiveCheckBox);
-            this.Controls.Add(marketIdLabel);
-            this.Controls.Add(pathLabel);
-            this.Controls.Add(this.pathTextBox);
-            this.Controls.Add(pathIdLabel);
-            this.Controls.Add(this.pathIdTextBox);
-            this.Controls.Add(timeZoneLabel);
+            this.ClientSize = new System.Drawing.Size(1273, 664);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.tblFilesRecon_LocationBindingNavigator);
+            this.Controls.Add(this.statusStrip1);
             this.Name = "FrmSLAMM";
             this.Text = "File Recon";
             this.Load += new System.EventHandler(this.FrmSLAMM_Load);
@@ -544,6 +564,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.tblFilesReconFunctionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblFilesReconMarketBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -583,5 +605,7 @@
         private System.Windows.Forms.ListBox functionIdListBox;
         private System.Windows.Forms.ListBox marketIdListBox;
         private System.Windows.Forms.ListBox timeZoneListBox;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

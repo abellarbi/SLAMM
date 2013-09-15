@@ -33,9 +33,13 @@ namespace SLAMM
             //_hasSuperAccess = false;
 
             if (_hasSuperAccess)
-                this.bindingNavigatorDeleteItem.Enabled = true;
+                bindingNavigatorDeleteItem.Enabled = true;
             else
+            {
+                panel1.Enabled = false;
                 bindingNavigatorDeleteItem.Enabled = false;
+            }
+
 
         }
 
@@ -112,7 +116,10 @@ namespace SLAMM
             SLAMMdbDataContext db = new SLAMMdbDataContext();
             RefreshData(db);
             ClearValidation();
-            //RefreshBindingCombox();
+
+            panel1.Enabled = false;
+            tblFilesRecon_LocationBindingNavigator.Enabled = true;
+        
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -124,11 +131,15 @@ namespace SLAMM
             if (!ValidateRequired(this.emailNotificationTextBox)) return;
             if (!ValidateRequired(this.filePatternTextBox)) return;
             if (!ValidateRequired(this.pathTextBox)) return;
+            
             //if (!ValidateRequired(this.pathTextBox)) return;
             //if (!ValidateRequired(this.pathTextBox)) return;
 
             // click Save on binding Navigator will not save data unless user move to another cell
             tblFilesRecon_LocationBindingNavigatorSaveItem_Click(sender, e);
+
+            MessageBox.Show("Database Updated","Completed",MessageBoxButtons.OK,MessageBoxIcon.Information);
+
             button1_Click(sender, e);
 
             ClearValidation();
@@ -298,6 +309,10 @@ namespace SLAMM
 
             this.tblFilesRecon_LocationBindingSource.MovePrevious();
             this.tblFilesRecon_LocationBindingSource.MoveNext();
+
+            panel1.Enabled = true;
+            tblFilesRecon_LocationBindingNavigator.Enabled = false;
+            arrivalTimeTextBox.Focus();
 
         }
 
