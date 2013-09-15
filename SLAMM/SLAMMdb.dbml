@@ -19,6 +19,13 @@
       <Association Name="tblFilesRecon_Function_tblFilesRecon_Location" Member="tblFilesRecon_Locations" ThisKey="FunctionId" OtherKey="FunctionId" Type="tblFilesRecon_Location" />
     </Type>
   </Table>
+  <Table Name="dbo.tblFilesRecon_Market" Member="tblFilesRecon_Markets">
+    <Type Name="tblFilesRecon_Market">
+      <Column Name="MarketId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Market" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="tblFilesRecon_Market_tblFilesRecon_Location" Member="tblFilesRecon_Locations" ThisKey="MarketId" OtherKey="MarketId" Type="tblFilesRecon_Location" />
+    </Type>
+  </Table>
   <Table Name="dbo.tblFilesRecon_Locations" Member="tblFilesRecon_Locations">
     <Type Name="tblFilesRecon_Location">
       <Column Name="PathId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -37,13 +44,6 @@
       <Association Name="tblFilesRecon_Location_tblFilesRecon" Member="tblFilesRecons" ThisKey="PathId" OtherKey="PathId" Type="tblFilesRecon" />
       <Association Name="tblFilesRecon_Function_tblFilesRecon_Location" Member="tblFilesRecon_Function" ThisKey="FunctionId" OtherKey="FunctionId" Type="tblFilesRecon_Function" IsForeignKey="true" />
       <Association Name="tblFilesRecon_Market_tblFilesRecon_Location" Member="tblFilesRecon_Market" ThisKey="MarketId" OtherKey="MarketId" Type="tblFilesRecon_Market" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.tblFilesRecon_Market" Member="tblFilesRecon_Markets">
-    <Type Name="tblFilesRecon_Market">
-      <Column Name="MarketId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="Market" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Association Name="tblFilesRecon_Market_tblFilesRecon_Location" Member="tblFilesRecon_Locations" ThisKey="MarketId" OtherKey="MarketId" Type="tblFilesRecon_Location" />
     </Type>
   </Table>
 </Database>

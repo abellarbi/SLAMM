@@ -36,12 +36,12 @@ namespace SLAMM
     partial void InserttblFilesRecon_Function(tblFilesRecon_Function instance);
     partial void UpdatetblFilesRecon_Function(tblFilesRecon_Function instance);
     partial void DeletetblFilesRecon_Function(tblFilesRecon_Function instance);
-    partial void InserttblFilesRecon_Location(tblFilesRecon_Location instance);
-    partial void UpdatetblFilesRecon_Location(tblFilesRecon_Location instance);
-    partial void DeletetblFilesRecon_Location(tblFilesRecon_Location instance);
     partial void InserttblFilesRecon_Market(tblFilesRecon_Market instance);
     partial void UpdatetblFilesRecon_Market(tblFilesRecon_Market instance);
     partial void DeletetblFilesRecon_Market(tblFilesRecon_Market instance);
+    partial void InserttblFilesRecon_Location(tblFilesRecon_Location instance);
+    partial void UpdatetblFilesRecon_Location(tblFilesRecon_Location instance);
+    partial void DeletetblFilesRecon_Location(tblFilesRecon_Location instance);
     #endregion
 		
 		public SLAMMdbDataContext() : 
@@ -90,19 +90,19 @@ namespace SLAMM
 			}
 		}
 		
-		public System.Data.Linq.Table<tblFilesRecon_Location> tblFilesRecon_Locations
-		{
-			get
-			{
-				return this.GetTable<tblFilesRecon_Location>();
-			}
-		}
-		
 		public System.Data.Linq.Table<tblFilesRecon_Market> tblFilesRecon_Markets
 		{
 			get
 			{
 				return this.GetTable<tblFilesRecon_Market>();
+			}
+		}
+		
+		public System.Data.Linq.Table<tblFilesRecon_Location> tblFilesRecon_Locations
+		{
+			get
+			{
+				return this.GetTable<tblFilesRecon_Location>();
 			}
 		}
 	}
@@ -465,6 +465,120 @@ namespace SLAMM
 		{
 			this.SendPropertyChanging();
 			entity.tblFilesRecon_Function = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tblFilesRecon_Market")]
+	public partial class tblFilesRecon_Market : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _MarketId;
+		
+		private string _Market;
+		
+		private EntitySet<tblFilesRecon_Location> _tblFilesRecon_Locations;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnMarketIdChanging(int value);
+    partial void OnMarketIdChanged();
+    partial void OnMarketChanging(string value);
+    partial void OnMarketChanged();
+    #endregion
+		
+		public tblFilesRecon_Market()
+		{
+			this._tblFilesRecon_Locations = new EntitySet<tblFilesRecon_Location>(new Action<tblFilesRecon_Location>(this.attach_tblFilesRecon_Locations), new Action<tblFilesRecon_Location>(this.detach_tblFilesRecon_Locations));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MarketId", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int MarketId
+		{
+			get
+			{
+				return this._MarketId;
+			}
+			set
+			{
+				if ((this._MarketId != value))
+				{
+					this.OnMarketIdChanging(value);
+					this.SendPropertyChanging();
+					this._MarketId = value;
+					this.SendPropertyChanged("MarketId");
+					this.OnMarketIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Market", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string Market
+		{
+			get
+			{
+				return this._Market;
+			}
+			set
+			{
+				if ((this._Market != value))
+				{
+					this.OnMarketChanging(value);
+					this.SendPropertyChanging();
+					this._Market = value;
+					this.SendPropertyChanged("Market");
+					this.OnMarketChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tblFilesRecon_Market_tblFilesRecon_Location", Storage="_tblFilesRecon_Locations", ThisKey="MarketId", OtherKey="MarketId")]
+		public EntitySet<tblFilesRecon_Location> tblFilesRecon_Locations
+		{
+			get
+			{
+				return this._tblFilesRecon_Locations;
+			}
+			set
+			{
+				this._tblFilesRecon_Locations.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_tblFilesRecon_Locations(tblFilesRecon_Location entity)
+		{
+			this.SendPropertyChanging();
+			entity.tblFilesRecon_Market = this;
+		}
+		
+		private void detach_tblFilesRecon_Locations(tblFilesRecon_Location entity)
+		{
+			this.SendPropertyChanging();
+			entity.tblFilesRecon_Market = null;
 		}
 	}
 	
@@ -925,120 +1039,6 @@ namespace SLAMM
 		{
 			this.SendPropertyChanging();
 			entity.tblFilesRecon_Location = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tblFilesRecon_Market")]
-	public partial class tblFilesRecon_Market : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _MarketId;
-		
-		private string _Market;
-		
-		private EntitySet<tblFilesRecon_Location> _tblFilesRecon_Locations;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnMarketIdChanging(int value);
-    partial void OnMarketIdChanged();
-    partial void OnMarketChanging(string value);
-    partial void OnMarketChanged();
-    #endregion
-		
-		public tblFilesRecon_Market()
-		{
-			this._tblFilesRecon_Locations = new EntitySet<tblFilesRecon_Location>(new Action<tblFilesRecon_Location>(this.attach_tblFilesRecon_Locations), new Action<tblFilesRecon_Location>(this.detach_tblFilesRecon_Locations));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MarketId", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int MarketId
-		{
-			get
-			{
-				return this._MarketId;
-			}
-			set
-			{
-				if ((this._MarketId != value))
-				{
-					this.OnMarketIdChanging(value);
-					this.SendPropertyChanging();
-					this._MarketId = value;
-					this.SendPropertyChanged("MarketId");
-					this.OnMarketIdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Market", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string Market
-		{
-			get
-			{
-				return this._Market;
-			}
-			set
-			{
-				if ((this._Market != value))
-				{
-					this.OnMarketChanging(value);
-					this.SendPropertyChanging();
-					this._Market = value;
-					this.SendPropertyChanged("Market");
-					this.OnMarketChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tblFilesRecon_Market_tblFilesRecon_Location", Storage="_tblFilesRecon_Locations", ThisKey="MarketId", OtherKey="MarketId")]
-		public EntitySet<tblFilesRecon_Location> tblFilesRecon_Locations
-		{
-			get
-			{
-				return this._tblFilesRecon_Locations;
-			}
-			set
-			{
-				this._tblFilesRecon_Locations.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_tblFilesRecon_Locations(tblFilesRecon_Location entity)
-		{
-			this.SendPropertyChanging();
-			entity.tblFilesRecon_Market = this;
-		}
-		
-		private void detach_tblFilesRecon_Locations(tblFilesRecon_Location entity)
-		{
-			this.SendPropertyChanging();
-			entity.tblFilesRecon_Market = null;
 		}
 	}
 }
