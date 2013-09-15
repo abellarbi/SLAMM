@@ -43,7 +43,7 @@
             System.Windows.Forms.Label pathIdLabel;
             System.Windows.Forms.Label timeZoneLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSLAMM));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tblFilesRecon_LocationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tblFilesRecon_LocationBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
@@ -78,6 +78,9 @@
             this.timeZoneListBox = new System.Windows.Forms.ListBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.tblFilesRecon_LocationDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -90,9 +93,6 @@
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dataGridViewCheckBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             arrivalTimeLabel = new System.Windows.Forms.Label();
             datePatternLabel = new System.Windows.Forms.Label();
             dateVariationLabel = new System.Windows.Forms.Label();
@@ -266,6 +266,7 @@
             this.tblFilesRecon_LocationBindingNavigator.Size = new System.Drawing.Size(1273, 25);
             this.tblFilesRecon_LocationBindingNavigator.TabIndex = 0;
             this.tblFilesRecon_LocationBindingNavigator.Text = "bindingNavigator1";
+            this.tblFilesRecon_LocationBindingNavigator.DoubleClick += new System.EventHandler(this.tblFilesRecon_LocationBindingNavigator_DoubleClick);
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -573,12 +574,39 @@
             this.panel1.Size = new System.Drawing.Size(687, 593);
             this.panel1.TabIndex = 27;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(251, 80);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(46, 13);
+            this.label3.TabIndex = 28;
+            this.label3.Text = "-1 0 2 ...";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(251, 52);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(115, 13);
+            this.label2.TabIndex = 27;
+            this.label2.Text = "ddMMyy yyyyMMdd  ...";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(251, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(151, 13);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "11:30:00 14:30:00 15:30:00 ...";
+            // 
             // tblFilesRecon_LocationDataGridView
             // 
             this.tblFilesRecon_LocationDataGridView.AllowUserToAddRows = false;
             this.tblFilesRecon_LocationDataGridView.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.tblFilesRecon_LocationDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.tblFilesRecon_LocationDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.tblFilesRecon_LocationDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -691,33 +719,6 @@
             this.dataGridViewCheckBoxColumn2.Name = "dataGridViewCheckBoxColumn2";
             this.dataGridViewCheckBoxColumn2.ReadOnly = true;
             this.dataGridViewCheckBoxColumn2.Width = 51;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(251, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(151, 13);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "11:30:00 14:30:00 15:30:00 ...";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(251, 52);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(115, 13);
-            this.label2.TabIndex = 27;
-            this.label2.Text = "ddMMyy yyyyMMdd  ...";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(251, 80);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 13);
-            this.label3.TabIndex = 28;
-            this.label3.Text = "-1 0 2 ...";
             // 
             // FrmSLAMM
             // 

@@ -239,6 +239,17 @@ namespace SLAMM
 
         }
 
+        private void tblFilesRecon_LocationBindingNavigator_DoubleClick(object sender, EventArgs e)
+        {
+            if (_hasSuperAccess)
+            {
+                FrmMarket x = new FrmMarket();
+                x.ShowDialog();
+            }
+        }
+
+ 
+
   
 
     }
