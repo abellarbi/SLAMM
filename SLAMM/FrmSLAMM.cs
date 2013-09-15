@@ -116,9 +116,17 @@ namespace SLAMM
             SLAMMdbDataContext db = new SLAMMdbDataContext();
             RefreshData(db);
             ClearValidation();
-
-            panel1.Enabled = false;
+                        
             tblFilesRecon_LocationBindingNavigator.Enabled = true;
+            tblFilesRecon_LocationDataGridView.Enabled = true;
+
+            if (_hasSuperAccess)
+                bindingNavigatorDeleteItem.Enabled = true;
+            else
+            {
+                panel1.Enabled = false;
+                bindingNavigatorDeleteItem.Enabled = false;
+            }
         
         }
 
@@ -158,82 +166,6 @@ namespace SLAMM
         }
 
 
-        //private void bindingNavigatorMoveNextItem_Click(object sender, EventArgs e)
-        //{
-        //    RefreshBindingCombox();
-        //}
-
-        //private void RefreshBindingCombox()
-        //{
-        //    try
-        //    {
-        //        //var x = functionIdComboBox.SelectedValue;
-
-        //        //tblFilesReconFunctionBindingSource.DataSource = dbSLAMM.tblFilesRecon_Functions;
-        //        //tblFilesReconMarketBindingSource.DataSource = dbSLAMM.tblFilesRecon_Markets;
-
-        //        //functionIdComboBox.Refresh();
-        //        //marketIdComboBox.Refresh();
-
-        //        ////////functionIdComboBox.Text = ((tblFilesRecon_Function)functionIdComboBox.SelectedItem).FunctionName;
-        //        ////////marketIdComboBox.Text = ((tblFilesRecon_Market)marketIdComboBox.SelectedItem).Market;
-
-        //        //functionIdComboBox.SelectedValue = ((tblFilesRecon_Function)functionIdComboBox.SelectedItem).FunctionId;
-        //        //marketIdComboBox.SelectedValue = ((tblFilesRecon_Market)marketIdComboBox.SelectedItem).MarketId;
-
-        //        //functionIdComboBox.SelectedText = functionIdComboBox.Text;
-        //        //marketIdComboBox.SelectedText = marketIdComboBox.Text;
-
-        //        //functionIdComboBox.Refresh();
-        //        //marketIdComboBox.Refresh();
-
-        //        //functionIdComboBox.SelectedValue = 0;
-        //        //functionIdComboBox.Refresh();
-        //        //functionIdComboBox.SelectedValue = x;
-        //        //functionIdComboBox.Refresh();
-
-        //        //x = marketIdComboBox.SelectedValue;
-
-        //        //marketIdComboBox.SelectedValue = 0;
-        //        //marketIdComboBox.Refresh();
-        //        //marketIdComboBox.SelectedValue = x;
-        //        //marketIdComboBox.Refresh();
-
-
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show(ex.Message);
-        //    }
-
-
-     
-        //}
-
-        //private void bindingNavigatorMovePreviousItem_Click(object sender, EventArgs e)
-        //{
-        //    RefreshBindingCombox();
-        //}
-
-        //private void bindingNavigatorMoveFirstItem_Click(object sender, EventArgs e)
-        //{
-        //    RefreshBindingCombox();
-        //}
-
-        //private void bindingNavigatorMoveLastItem_Click(object sender, EventArgs e)
-        //{
-        //    RefreshBindingCombox();
-        //}
-
-        //private void functionIdComboBox_Leave(object sender, EventArgs e)
-        //{
-        //    //RefreshBindingCombox();
-        //}
-
-        //private void marketIdComboBox_Leave(object sender, EventArgs e)
-        //{
-        //    //RefreshBindingCombox();
-        //}
 
         private void arrivalTimeTextBox_Validating(object sender, CancelEventArgs e)
         {
@@ -286,16 +218,6 @@ namespace SLAMM
             ValidateRequired((TextBox)(sender));
         }
 
-        private void functionIdComboBox_Validating(object sender, CancelEventArgs e)
-        {
-            //ValidateRequired((ComboBox)(sender));
-        }
-
-        //private void marketIdComboBox_Validating(object sender, CancelEventArgs e)
-        //{
-        //    //ValidateRequired((ComboBox)(sender));
-        //}
-
         private void pathTextBox_Validating(object sender, CancelEventArgs e)
         {
             ValidateRequired((TextBox)(sender));
@@ -312,17 +234,12 @@ namespace SLAMM
 
             panel1.Enabled = true;
             tblFilesRecon_LocationBindingNavigator.Enabled = false;
+            tblFilesRecon_LocationDataGridView.Enabled = false;
             arrivalTimeTextBox.Focus();
 
         }
 
   
-
-        //private void timeZoneComboBox_Validating(object sender, CancelEventArgs e)
-        //{
-        //    //ValidateRequired((ComboBox)(sender));
-
-        //}
 
     }
 
@@ -346,33 +263,4 @@ namespace SLAMM
 
     }
 
-    //public class Place
-    //{
-    //    // Properties. 
-    //    public string Name { get; private set; }
-    //    public string State { get; private set; }
-       
-
-    //    // Constructor. 
-    //    internal Place(string name,
-    //                    string state)
-                        
-    //    {
-    //        Name = name;
-    //        State = state;
-           
-    //    }
-
-    //    //List<Place> allPlaces = new List<Place>();
-
-    //    //    // For each location, call the Web service method to get data. 
-    //    //    foreach (string location in locations)
-    //    //    {
-    //    //        Place[] places = CallGetPlaceListMethod(location);
-    //    //        allPlaces.AddRange(places);
-    //    //    }
-
-    //    //    return allPlaces.ToArray();
-
-    //}
 }

@@ -43,6 +43,7 @@
             System.Windows.Forms.Label pathIdLabel;
             System.Windows.Forms.Label timeZoneLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSLAMM));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tblFilesRecon_LocationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tblFilesRecon_LocationBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
@@ -77,6 +78,21 @@
             this.timeZoneListBox = new System.Windows.Forms.ListBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tblFilesRecon_LocationDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dataGridViewCheckBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             arrivalTimeLabel = new System.Windows.Forms.Label();
             datePatternLabel = new System.Windows.Forms.Label();
             dateVariationLabel = new System.Windows.Forms.Label();
@@ -97,6 +113,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tblFilesReconMarketBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tblFilesRecon_LocationDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // arrivalTimeLabel
@@ -350,8 +367,9 @@
             // 
             this.arrivalTimeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblFilesRecon_LocationBindingSource, "ArrivalTime", true));
             this.arrivalTimeTextBox.Location = new System.Drawing.Point(125, 20);
+            this.arrivalTimeTextBox.MaxLength = 8;
             this.arrivalTimeTextBox.Name = "arrivalTimeTextBox";
-            this.arrivalTimeTextBox.Size = new System.Drawing.Size(521, 20);
+            this.arrivalTimeTextBox.Size = new System.Drawing.Size(119, 20);
             this.arrivalTimeTextBox.TabIndex = 0;
             this.arrivalTimeTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.arrivalTimeTextBox_Validating);
             // 
@@ -359,8 +377,9 @@
             // 
             this.dateVariationTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblFilesRecon_LocationBindingSource, "DateVariation", true));
             this.dateVariationTextBox.Location = new System.Drawing.Point(125, 73);
+            this.dateVariationTextBox.MaxLength = 2;
             this.dateVariationTextBox.Name = "dateVariationTextBox";
-            this.dateVariationTextBox.Size = new System.Drawing.Size(521, 20);
+            this.dateVariationTextBox.Size = new System.Drawing.Size(71, 20);
             this.dateVariationTextBox.TabIndex = 2;
             this.dateVariationTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.dateVariationTextBox_Validating);
             // 
@@ -368,6 +387,7 @@
             // 
             this.descriptionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblFilesRecon_LocationBindingSource, "Description", true));
             this.descriptionTextBox.Location = new System.Drawing.Point(125, 99);
+            this.descriptionTextBox.MaxLength = 240;
             this.descriptionTextBox.Name = "descriptionTextBox";
             this.descriptionTextBox.Size = new System.Drawing.Size(521, 20);
             this.descriptionTextBox.TabIndex = 3;
@@ -376,6 +396,7 @@
             // 
             this.emailNotificationTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblFilesRecon_LocationBindingSource, "EmailNotification", true));
             this.emailNotificationTextBox.Location = new System.Drawing.Point(125, 125);
+            this.emailNotificationTextBox.MaxLength = 600;
             this.emailNotificationTextBox.Name = "emailNotificationTextBox";
             this.emailNotificationTextBox.Size = new System.Drawing.Size(521, 20);
             this.emailNotificationTextBox.TabIndex = 4;
@@ -385,6 +406,7 @@
             // 
             this.filePatternTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblFilesRecon_LocationBindingSource, "FilePattern", true));
             this.filePatternTextBox.Location = new System.Drawing.Point(125, 151);
+            this.filePatternTextBox.MaxLength = 240;
             this.filePatternTextBox.Name = "filePatternTextBox";
             this.filePatternTextBox.Size = new System.Drawing.Size(521, 20);
             this.filePatternTextBox.TabIndex = 5;
@@ -422,6 +444,7 @@
             // 
             this.pathTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblFilesRecon_LocationBindingSource, "Path", true));
             this.pathTextBox.Location = new System.Drawing.Point(125, 345);
+            this.pathTextBox.MaxLength = 240;
             this.pathTextBox.Name = "pathTextBox";
             this.pathTextBox.Size = new System.Drawing.Size(521, 20);
             this.pathTextBox.TabIndex = 10;
@@ -433,7 +456,7 @@
             this.pathIdTextBox.Enabled = false;
             this.pathIdTextBox.Location = new System.Drawing.Point(125, 371);
             this.pathIdTextBox.Name = "pathIdTextBox";
-            this.pathIdTextBox.Size = new System.Drawing.Size(521, 20);
+            this.pathIdTextBox.Size = new System.Drawing.Size(119, 20);
             this.pathIdTextBox.TabIndex = 11;
             // 
             // button1
@@ -461,8 +484,9 @@
             // 
             this.datePatternTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblFilesRecon_LocationBindingSource, "DatePattern", true));
             this.datePatternTextBox.Location = new System.Drawing.Point(125, 49);
+            this.datePatternTextBox.MaxLength = 20;
             this.datePatternTextBox.Name = "datePatternTextBox";
-            this.datePatternTextBox.Size = new System.Drawing.Size(521, 20);
+            this.datePatternTextBox.Size = new System.Drawing.Size(119, 20);
             this.datePatternTextBox.TabIndex = 1;
             this.datePatternTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.datePatternTextBox_Validating);
             // 
@@ -505,7 +529,7 @@
             // 
             // statusStrip1
             // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 642);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 650);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(1273, 22);
             this.statusStrip1.TabIndex = 26;
@@ -513,6 +537,9 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.arrivalTimeTextBox);
             this.panel1.Controls.Add(this.timeZoneListBox);
             this.panel1.Controls.Add(timeZoneLabel);
@@ -546,16 +573,164 @@
             this.panel1.Size = new System.Drawing.Size(687, 593);
             this.panel1.TabIndex = 27;
             // 
+            // tblFilesRecon_LocationDataGridView
+            // 
+            this.tblFilesRecon_LocationDataGridView.AllowUserToAddRows = false;
+            this.tblFilesRecon_LocationDataGridView.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.tblFilesRecon_LocationDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.tblFilesRecon_LocationDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tblFilesRecon_LocationDataGridView.AutoGenerateColumns = false;
+            this.tblFilesRecon_LocationDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.tblFilesRecon_LocationDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tblFilesRecon_LocationDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewCheckBoxColumn1,
+            this.dataGridViewCheckBoxColumn2});
+            this.tblFilesRecon_LocationDataGridView.DataSource = this.tblFilesRecon_LocationBindingSource;
+            this.tblFilesRecon_LocationDataGridView.Location = new System.Drawing.Point(721, 39);
+            this.tblFilesRecon_LocationDataGridView.Name = "tblFilesRecon_LocationDataGridView";
+            this.tblFilesRecon_LocationDataGridView.ReadOnly = true;
+            this.tblFilesRecon_LocationDataGridView.Size = new System.Drawing.Size(552, 591);
+            this.tblFilesRecon_LocationDataGridView.TabIndex = 27;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "PathId";
+            this.dataGridViewTextBoxColumn1.HeaderText = "PathId";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 63;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Path";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Path";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 54;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "FilePattern";
+            this.dataGridViewTextBoxColumn3.HeaderText = "FilePattern";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 82;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "DatePattern";
+            this.dataGridViewTextBoxColumn4.HeaderText = "DatePattern";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 89;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Description";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Description";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Width = 85;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "ArrivalTime";
+            this.dataGridViewTextBoxColumn6.HeaderText = "ArrivalTime";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.Width = 84;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "EmailNotification";
+            this.dataGridViewTextBoxColumn7.HeaderText = "EmailNotification";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.Width = 110;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "TimeZone";
+            this.dataGridViewTextBoxColumn8.HeaderText = "TimeZone";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            this.dataGridViewTextBoxColumn8.Width = 80;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "DateVariation";
+            this.dataGridViewTextBoxColumn9.HeaderText = "DateVariation";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            this.dataGridViewTextBoxColumn9.Width = 96;
+            // 
+            // dataGridViewCheckBoxColumn1
+            // 
+            this.dataGridViewCheckBoxColumn1.DataPropertyName = "IsRecursive";
+            this.dataGridViewCheckBoxColumn1.HeaderText = "IsRecursive";
+            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            this.dataGridViewCheckBoxColumn1.ReadOnly = true;
+            this.dataGridViewCheckBoxColumn1.Width = 69;
+            // 
+            // dataGridViewCheckBoxColumn2
+            // 
+            this.dataGridViewCheckBoxColumn2.DataPropertyName = "IsActive";
+            this.dataGridViewCheckBoxColumn2.HeaderText = "IsActive";
+            this.dataGridViewCheckBoxColumn2.Name = "dataGridViewCheckBoxColumn2";
+            this.dataGridViewCheckBoxColumn2.ReadOnly = true;
+            this.dataGridViewCheckBoxColumn2.Width = 51;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(251, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(151, 13);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "11:30:00 14:30:00 15:30:00 ...";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(251, 52);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(115, 13);
+            this.label2.TabIndex = 27;
+            this.label2.Text = "ddMMyy yyyyMMdd  ...";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(251, 80);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(46, 13);
+            this.label3.TabIndex = 28;
+            this.label3.Text = "-1 0 2 ...";
+            // 
             // FrmSLAMM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1273, 664);
+            this.ClientSize = new System.Drawing.Size(1273, 672);
+            this.Controls.Add(this.tblFilesRecon_LocationDataGridView);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tblFilesRecon_LocationBindingNavigator);
             this.Controls.Add(this.statusStrip1);
             this.Name = "FrmSLAMM";
             this.Text = "File Recon";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmSLAMM_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tblFilesRecon_LocationBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblFilesRecon_LocationBindingNavigator)).EndInit();
@@ -566,6 +741,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tblFilesRecon_LocationDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -607,5 +783,20 @@
         private System.Windows.Forms.ListBox timeZoneListBox;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView tblFilesRecon_LocationDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
     }
 }
