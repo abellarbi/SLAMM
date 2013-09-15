@@ -51,6 +51,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListItem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SLAMMdb.designer.cs">
@@ -70,7 +71,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Properties\DataSources\tblFilesRecon_Function.datasource" />
     <None Include="Properties\DataSources\tblFilesRecon_Location.datasource" />
+    <None Include="Properties\DataSources\tblFilesRecon_Market.datasource" />
     <None Include="SLAMMdb.dbml.layout">
       <DependentUpon>SLAMMdb.dbml</DependentUpon>
     </None>
