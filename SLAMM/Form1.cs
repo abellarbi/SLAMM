@@ -29,13 +29,13 @@ namespace SLAMM
 
             RefreshData();
 
-            splitContainer1.Panel1.Enabled = false;
+            SetStateNavigate(false);
     
         }
 
         private void RefreshData()
         {
-            db = new SLAMMdbDataContext();
+            //db = new SLAMMdbDataContext();
 
             var x = (from p in db.tblFilesRecon_Functions select p);
 
@@ -72,8 +72,7 @@ namespace SLAMM
 
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
-            splitContainer1.Panel1.Enabled = true;
-            tblFilesRecon_LocationDataGridView.Enabled = false;
+            SetStateNavigate(true);
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -82,8 +81,7 @@ namespace SLAMM
             try 
 	            {
                     tblFilesRecon_LocationBindingNavigatorSaveItem_Click(sender, e);
-                    splitContainer1.Panel1.Enabled = false;
-                    tblFilesRecon_LocationDataGridView.Enabled = true;
+                    SetStateNavigate(false);
 	            }
 	            catch (Exception ex)
 	            {
@@ -96,10 +94,7 @@ namespace SLAMM
         {
             try
             {
-                
-               
-                splitContainer1.Panel1.Enabled = false;
-                tblFilesRecon_LocationDataGridView.Enabled = true;
+                SetStateNavigate(false);
                 RefreshData();
             }
             catch (Exception ex)
@@ -107,6 +102,13 @@ namespace SLAMM
 
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void SetStateNavigate(bool NavigateState)
+        {
+            splitContainer1.Panel1.Enabled = NavigateState;
+            tblFilesRecon_LocationDataGridView.Enabled = !NavigateState;
+            //tblFilesRecon_LocationBindingNavigator.Enabled = !NavigateState;
         }
 
     }

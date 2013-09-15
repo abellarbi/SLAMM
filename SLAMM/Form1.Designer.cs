@@ -45,6 +45,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.timeZoneComboBox = new System.Windows.Forms.ComboBox();
             this.tblFilesRecon_LocationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.arrivalTimeTextBox = new System.Windows.Forms.TextBox();
@@ -88,8 +90,6 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.tblFilesRecon_LocationBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
             arrivalTimeLabel = new System.Windows.Forms.Label();
             datePatternLabel = new System.Windows.Forms.Label();
             dateVariationLabel = new System.Windows.Forms.Label();
@@ -284,6 +284,26 @@
             this.splitContainer1.Size = new System.Drawing.Size(1377, 626);
             this.splitContainer1.SplitterDistance = 352;
             this.splitContainer1.TabIndex = 1;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(122, 526);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.TabIndex = 29;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(122, 496);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.TabIndex = 28;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // timeZoneComboBox
             // 
@@ -667,26 +687,6 @@
             this.tblFilesRecon_LocationBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.tblFilesRecon_LocationBindingNavigatorSaveItem.Text = "Save Data";
             this.tblFilesRecon_LocationBindingNavigatorSaveItem.Click += new System.EventHandler(this.tblFilesRecon_LocationBindingNavigatorSaveItem_Click);
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Location = new System.Drawing.Point(122, 496);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnCancel.TabIndex = 28;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(122, 526);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
-            this.btnSave.TabIndex = 29;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // Form1
             // 
